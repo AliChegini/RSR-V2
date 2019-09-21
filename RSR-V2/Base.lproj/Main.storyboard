@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JT5-KW-dDS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RSR Revalidatieservice-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="RSR_V2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_background" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-ve-KiD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBf-67-aCZ">
+                                <rect key="frame" x="40" y="567" width="295" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1dk-IV-fN6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="RSR Pechhulp" image="ic_attention" backgroundImage="btn_normal">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zds-QZ-d7Z" kind="show" id="Iae-HX-4d3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0jP-ve-KiD" secondAttribute="bottom" id="UTA-Ta-sgP"/>
+                            <constraint firstItem="0jP-ve-KiD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VFF-HP-0D7"/>
+                            <constraint firstItem="BBf-67-aCZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="WbX-sW-G5G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BBf-67-aCZ" secondAttribute="bottom" constant="30" id="Wtq-dD-DUa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BBf-67-aCZ" secondAttribute="trailing" constant="40" id="Zio-1B-MEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0jP-ve-KiD" secondAttribute="trailing" id="buT-In-WOW"/>
+                            <constraint firstItem="0jP-ve-KiD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kq4-Gp-GNF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="RSR Revalidatieservice" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="EIr-t4-uhi">
+                        <barButtonItem key="rightBarButtonItem" title="About" image="ic_over_normal" id="7vF-AO-YbH"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="984.79999999999995" y="34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6fa-9E-5eg">
+            <objects>
+                <viewController id="zds-QZ-d7Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eK8-pB-Fj7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aph-0a-KV8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-BE-dJr">
+                                <rect key="frame" x="40" y="567" width="295" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ejA-e8-hzW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Bel RSR nu" image="ic_phone" backgroundImage="btn_normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TGV-hZ-oK6" firstAttribute="trailing" secondItem="Aph-0a-KV8" secondAttribute="trailing" id="6nD-p2-2Nh"/>
+                            <constraint firstItem="TGV-hZ-oK6" firstAttribute="trailing" secondItem="Fh1-BE-dJr" secondAttribute="trailing" constant="40" id="CiA-NH-8Ks"/>
+                            <constraint firstItem="Aph-0a-KV8" firstAttribute="top" secondItem="TGV-hZ-oK6" secondAttribute="top" id="DX9-cg-P7S"/>
+                            <constraint firstItem="Fh1-BE-dJr" firstAttribute="leading" secondItem="TGV-hZ-oK6" secondAttribute="leading" constant="40" id="HhA-m0-jEV"/>
+                            <constraint firstItem="TGV-hZ-oK6" firstAttribute="bottom" secondItem="Aph-0a-KV8" secondAttribute="bottom" id="UcT-Pb-h96"/>
+                            <constraint firstItem="Aph-0a-KV8" firstAttribute="leading" secondItem="TGV-hZ-oK6" secondAttribute="leading" id="asy-O5-c7X"/>
+                            <constraint firstItem="TGV-hZ-oK6" firstAttribute="bottom" secondItem="Fh1-BE-dJr" secondAttribute="bottom" constant="30" id="tdY-RM-hhQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TGV-hZ-oK6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRE-Hz-d6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VbW-bH-Dn9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JT5-KW-dDS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="terug_normal" backIndicatorTransitionMaskImage="terug_normal" id="gL6-6V-TE6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e67-df-y1y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsp-fm-6bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_normal" width="286" height="54"/>
+        <image name="ic_attention" width="42" height="36"/>
+        <image name="ic_over_normal" width="30" height="30"/>
+        <image name="ic_phone" width="32" height="36"/>
+        <image name="img_background" width="320" height="416"/>
+        <image name="terug_normal" width="54" height="22"/>
+    </resources>
 </document>
